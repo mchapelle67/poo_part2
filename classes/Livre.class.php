@@ -9,12 +9,15 @@ class Livre {
     private int $_anneeDeParution;
     private int $_nbPages;
     private float $_prix;
+    private Auteur $_auteur;
 
-    public function __construct(string $_ouvrage, int $_anneeDeParution, int $_nbPages, float $_prix) {
-        $this->_ouvrage = $_ouvrage;
-        $this->_anneeDeParution = $_anneeDeParution;
-        $this->_nbPages = $_nbPages;
-        $this->_prix = $_prix;
+    public function __construct(string $ouvrage, int $anneeDeParution, int $nbPages, float $prix, Auteur $auteur) {
+        $this->_ouvrage = $ouvrage;
+        $this->_anneeDeParution = $anneeDeParution;
+        $this->_nbPages = $nbPages;
+        $this->_prix = $prix;
+        $this->_auteur = $auteur;
+        $auteur->ajouterLivre($this);
     }
 
     public function getOuvrage(): string {
@@ -29,24 +32,26 @@ class Livre {
     public function getPrix(): float {
         return $this->_prix;
     }
-
-
-    public function setOuvrage(string $_ouvrage) {
-        return $this->_ouvrage = $_ouvrage;
-    }
-    public function setAnneeDeParution(int $_anneeDeParution) {
-        return $this->_anneeDeParution = $_anneeDeParution;
-    }
-    public function setNbPages(int $_nbPages) {
-        return $this->_nbPages= $_nbPages;
-    }
-    public function set(float $_prix) {
-        return $this->_prix= $_prix;
+    public function getAuteur(): Auteur {
+        return $this->_auteur;
     }
 
 
-    public function afficherBibliographie(){
-        return $this->_ouvrage." (".$this->_anneeDeParution.") : ".$this->_nbPages." pages / ".$this->_prix." €<br>";
+    public function setOuvrage(string $ouvrage) {
+        return $this->_ouvrage = $ouvrage;
     }
+    public function setAnneeDeParution(int $anneeDeParution) {
+        return $this->_anneeDeParution = $anneeDeParution;
+    }
+    public function setNbPages(int $nbPages) {
+        return $this->_nbPages= $nbPages;
+    }
+    public function setPrix(float $prix) {
+        return $this->_prix= $prix;  
+    }
+    public function setAuteur(Auteur $livre) {
+        return $this->_auteur= $auteur;  
+    }
+
 }
 

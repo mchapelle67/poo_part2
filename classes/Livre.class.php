@@ -53,5 +53,5 @@ class Livre {
         return $this->_auteur= $auteur;  
     }
  
-}
+} 
 

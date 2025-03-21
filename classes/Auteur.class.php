@@ -48,5 +48,5 @@ class Auteur {
         foreach ($this->_livres as $livre) {
             echo $livre->getOuvrage() . " (" . $livre->getAnneeDeParution() . ") : " . $livre->getNbPages() . " pages / " . $livre->getPrix() . " €<br>";
         }
-}
+} 
 }

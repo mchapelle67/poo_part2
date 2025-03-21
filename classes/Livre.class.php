@@ -52,6 +52,6 @@ class Livre {
     public function setAuteur(Auteur $livre) {
         return $this->_auteur= $auteur;  
     }
-
+ 
 }
 

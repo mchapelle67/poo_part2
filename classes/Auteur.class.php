@@ -41,7 +41,7 @@ class Auteur {
     public function ajouterLivre(Livre $livre){
         $this->_livres[] = $livre;
         // tu vas array push l'objet livre que je t'ai donné en argument dans le tableau de livres de l'auteur
-    }
+    } 
     
     public function afficherBibliographie() {
         echo $this->_prenom . " " . $this->_nom . " : <br>";

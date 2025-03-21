@@ -22,10 +22,6 @@ class Auteur {
         return $this->_nom;
     }
 
-    // public function getLivres(): Livre {
-    //     return $this->_livres;
-    // }
-
 
     public function setPrenom(string $prenom) {
         return $this->_prenom = $prenom;
@@ -33,9 +29,6 @@ class Auteur {
     public function setNom(string $nom) {
         return $this->_nom = $nom;
     }
-    // public function setLivres(Livre $livres) {
-    //     return $this->_livres = $livres;
-    // }
 
 
     public function ajouterLivre(Livre $livre){
